@@ -24,10 +24,11 @@ namespace clipboardalpha
     public partial class MainWindow : Window
     {
         ClipBoardFrame clipboard;
+        ClipBoardViewModel eventresult;
         public MainWindow()
         {
             InitializeComponent();
-            newclips.ItemsSource = cliplist();
+            newclips.ItemsSource = eventresult;
         }
         protected override void OnSourceInitialized(EventArgs e)
         {
@@ -59,14 +60,14 @@ namespace clipboardalpha
                 return;
             }
 
-           // var item = new LootItemViewModel(clippedText);
 
-            //items.Add(item);
+            eventresult.Add(result);
+          
+            newclips.Items.MoveCurrentToLast();
+            newclips.ScrollIntoView(newclips.Items.CurrentItem);
+           
 
-            //itemListbox.Items.MoveCurrentToLast();
-            //itemListbox.ScrollIntoView(itemListbox.Items.CurrentItem);
-
-           // await item.PopulatePriceInfoFromWeb();
+          
         }
 
         protected override void OnClosing(CancelEventArgs e)
