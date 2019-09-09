@@ -1,0 +1,9 @@
+C:\Users\aygup\source\repos\clipboardalpha\ClipBoardFrameWork\bin\Debug\ClipBoardFrameWork.dll
+C:\Users\aygup\source\repos\clipboardalpha\ClipBoardFrameWork\bin\Debug\ClipBoardFrameWork.pdb
+C:\Users\aygup\source\repos\clipboardalpha\ClipBoardFrameWork\obj\Debug\ClipBoardFrameWork.csprojAssemblyReference.cache
+C:\Users\aygup\source\repos\clipboardalpha\ClipBoardFrameWork\obj\Debug\ClipBoardFrameWork.csproj.CoreCompileInputs.cache
+C:\Users\aygup\source\repos\clipboardalpha\ClipBoardFrameWork\obj\Debug\ClipBoardFrameWork.dll
+C:\Users\aygup\source\repos\clipboardalpha\ClipBoardFrameWork\obj\Debug\ClipBoardFrameWork.pdb
+C:\Users\aygup\source\repos\clipboardalpha\ClipBoardFrameWork\bin\Debug\Models.dll
+C:\Users\aygup\source\repos\clipboardalpha\ClipBoardFrameWork\bin\Debug\Models.pdb
+C:\Users\aygup\source\repos\clipboardalpha\ClipBoardFrameWork\obj\Debug\ClipBoardFrameWork.csproj.CopyComplete

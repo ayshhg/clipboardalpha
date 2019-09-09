@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clipboardalpha", "clipboard
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClipBoardFrameWork", "ClipBoardFrameWork\ClipBoardFrameWork.csproj", "{FF5246F1-13F1-4BB7-9D32-B919AF61D636}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clipboard-test", "clipboard-test\clipboard-test.csproj", "{A61141E1-2F67-4821-B399-3083675B8776}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{B117DBF3-B692-407E-B2AF-D989D73339BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{FF5246F1-13F1-4BB7-9D32-B919AF61D636}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF5246F1-13F1-4BB7-9D32-B919AF61D636}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF5246F1-13F1-4BB7-9D32-B919AF61D636}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A61141E1-2F67-4821-B399-3083675B8776}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A61141E1-2F67-4821-B399-3083675B8776}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A61141E1-2F67-4821-B399-3083675B8776}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A61141E1-2F67-4821-B399-3083675B8776}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B117DBF3-B692-407E-B2AF-D989D73339BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B117DBF3-B692-407E-B2AF-D989D73339BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B117DBF3-B692-407E-B2AF-D989D73339BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B117DBF3-B692-407E-B2AF-D989D73339BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

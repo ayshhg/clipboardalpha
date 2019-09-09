@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClipBoardFrameWork
+namespace Models
 {
-    public class Class1
+    public class ClipBoardModel
     {
+        public string data{get; set;}
+
+        public string type { get; set; }
     }
 }

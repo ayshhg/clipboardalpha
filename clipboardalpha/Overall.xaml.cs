@@ -18,13 +18,19 @@ namespace clipboardalpha
     /// <summary>
     /// Interaction logic for Overall.xaml
     /// </summary>
-    public partial class Overall : Page
+    public partial class Overall : Window
     {
         public Overall()
         {
             InitializeComponent();
             newclips.ItemsSource = cliplist();
         }
+        public Overall(EventArgs e)
+        {
+            base.OnSourceInitialized(e);
+        
+        }
+      
         private List<ClipInfo> cliplist()
         {
             bool IsHTMLDataOnClipboard = Clipboard.ContainsData(DataFormats.Text);

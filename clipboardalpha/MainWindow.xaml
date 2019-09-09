@@ -32,8 +32,23 @@
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Frame Source="Overall.xaml">
-            </Frame>
+            <Grid>
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Left">
+                    <Button Style="{StaticResource buttonStyle}">Overall</Button>
+                    <Button Style="{StaticResource buttonStyle}">Text</Button>
+                    <Button Style="{StaticResource buttonStyle}">Images</Button>
+                    <Button Style="{StaticResource buttonStyle}">Documents</Button>
+                    <Button Style="{StaticResource buttonStyle}">File</Button>
+                </StackPanel>
+
+                <DataGrid Grid.Column="1" Height="Auto" HorizontalAlignment="Left" Margin="12,21,0,0" Name="newclips" VerticalAlignment="Top" Width="Auto" />
+
+            </Grid>
 
         </Grid>
     </Grid>
