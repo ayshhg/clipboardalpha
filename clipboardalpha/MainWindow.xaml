@@ -45,8 +45,14 @@
                     <Button Style="{StaticResource buttonStyle}">Documents</Button>
                     <Button Style="{StaticResource buttonStyle}">File</Button>
                 </StackPanel>
-
-                <DataGrid Grid.Column="1" Height="Auto" HorizontalAlignment="Left" Margin="12,21,0,0" Name="newclips" VerticalAlignment="Top" Width="Auto" />
+                <ListBox Name="newclips"  Grid.Column="1" Margin="20">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate >
+                            <TextBlock Text="{Binding Path=data}"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+               
 
             </Grid>
 

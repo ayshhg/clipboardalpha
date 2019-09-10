@@ -24,7 +24,7 @@ namespace clipboardalpha
     public partial class MainWindow : Window
     {
         ClipBoardFrame clipboard;
-        ClipBoardViewModel eventresult;
+        ClipBoardViewModel eventresult = new ClipBoardViewModel();
         public MainWindow()
         {
             InitializeComponent();
@@ -51,7 +51,7 @@ namespace clipboardalpha
             test.Add(new ClipInfo() { Text = htmlData });
             return test;
         }
-        private async void ClipboardTextChanged(object sender, ClipBoardModel result)
+        private  void ClipboardTextChanged(object sender, ClipBoardModel result)
         {
             var clippedText = result.data.Trim();
 
@@ -65,8 +65,6 @@ namespace clipboardalpha
           
             newclips.Items.MoveCurrentToLast();
             newclips.ScrollIntoView(newclips.Items.CurrentItem);
-           
-
           
         }
 
