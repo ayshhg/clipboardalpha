@@ -48,7 +48,15 @@
                 <ListBox Name="newclips"  Grid.Column="1" Margin="20">
                     <ListBox.ItemTemplate>
                         <DataTemplate >
-                            <TextBlock Text="{Binding Path=data}"/>
+                            <Label Content="{Binding Path=data}">
+                                <Label.ContextMenu>
+                                    <ContextMenu Name="cm" StaysOpen="true">
+                                        <MenuItem Name="storing" Header="Add to favourites" />
+                                        <MenuItem Name="translate" Header="Translate" />
+                                        <MenuItem Name="removal" Header="delete item" />
+                                    </ContextMenu>
+                                </Label.ContextMenu>
+                            </Label>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
