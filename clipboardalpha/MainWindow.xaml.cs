@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ClipBoardFrameWork;
 using Models;
+using DatabaseLayer;
 
 namespace clipboardalpha
 {
@@ -25,10 +26,17 @@ namespace clipboardalpha
     {
         ClipBoardFrame clipboard;
         ClipBoardViewModel eventresult = new ClipBoardViewModel();
+        DatabaseAccess db = new DatabaseAccess();
+
         public MainWindow()
         {
             InitializeComponent();
+            FillDataGrid();
             newclips.ItemsSource = eventresult;
+        }
+      public void FillDataGrid()
+        {
+            newclips.ItemsSource = db.LoadData().DefaultView;
         }
         protected override void OnSourceInitialized(EventArgs e)
         {

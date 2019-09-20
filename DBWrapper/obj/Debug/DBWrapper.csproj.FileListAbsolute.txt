@@ -1,0 +1,6 @@
+C:\Users\aygup\source\repos\clipboardalpha\DBWrapper\bin\Debug\DBWrapper.dll
+C:\Users\aygup\source\repos\clipboardalpha\DBWrapper\bin\Debug\DBWrapper.pdb
+C:\Users\aygup\source\repos\clipboardalpha\DBWrapper\obj\Debug\DBWrapper.csprojAssemblyReference.cache
+C:\Users\aygup\source\repos\clipboardalpha\DBWrapper\obj\Debug\DBWrapper.csproj.CoreCompileInputs.cache
+C:\Users\aygup\source\repos\clipboardalpha\DBWrapper\obj\Debug\DBWrapper.dll
+C:\Users\aygup\source\repos\clipboardalpha\DBWrapper\obj\Debug\DBWrapper.pdb

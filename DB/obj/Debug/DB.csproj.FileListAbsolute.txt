@@ -1,0 +1,17 @@
+C:\Users\aygup\source\repos\clipboardalpha\DB\bin\Debug\DB.pdb
+C:\Users\aygup\source\repos\clipboardalpha\DB\bin\Debug\EntityFramework.dll
+C:\Users\aygup\source\repos\clipboardalpha\DB\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\aygup\source\repos\clipboardalpha\DB\bin\Debug\System.Data.SQLite.dll
+C:\Users\aygup\source\repos\clipboardalpha\DB\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\aygup\source\repos\clipboardalpha\DB\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\aygup\source\repos\clipboardalpha\DB\bin\Debug\EntityFramework.xml
+C:\Users\aygup\source\repos\clipboardalpha\DB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\aygup\source\repos\clipboardalpha\DB\bin\Debug\System.Data.SQLite.xml
+C:\Users\aygup\source\repos\clipboardalpha\DB\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\aygup\source\repos\clipboardalpha\DB\obj\Debug\DB.csprojAssemblyReference.cache
+C:\Users\aygup\source\repos\clipboardalpha\DB\obj\Debug\DB.csproj.CoreCompileInputs.cache
+C:\Users\aygup\source\repos\clipboardalpha\DB\obj\Debug\DB.csproj.CopyComplete
+C:\Users\aygup\source\repos\clipboardalpha\DB\obj\Debug\DB.pdb
+C:\Users\aygup\source\repos\clipboardalpha\DB\bin\Debug\DB.exe.config
+C:\Users\aygup\source\repos\clipboardalpha\DB\bin\Debug\DB.exe
+C:\Users\aygup\source\repos\clipboardalpha\DB\obj\Debug\DB.exe

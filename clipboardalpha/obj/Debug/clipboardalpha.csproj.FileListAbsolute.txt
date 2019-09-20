@@ -21,3 +21,9 @@ C:\Users\aygup\source\repos\clipboardalpha\clipboardalpha\bin\Debug\ClipBoardFra
 C:\Users\aygup\source\repos\clipboardalpha\clipboardalpha\obj\Debug\clipboardalpha.csproj.CopyComplete
 C:\Users\aygup\source\repos\clipboardalpha\clipboardalpha\bin\Debug\Models.dll
 C:\Users\aygup\source\repos\clipboardalpha\clipboardalpha\bin\Debug\Models.pdb
+C:\Users\aygup\source\repos\clipboardalpha\clipboardalpha\bin\Debug\DatabaseLayer.dll
+C:\Users\aygup\source\repos\clipboardalpha\clipboardalpha\bin\Debug\System.Data.SQLite.dll
+C:\Users\aygup\source\repos\clipboardalpha\clipboardalpha\bin\Debug\DatabaseLayer.pdb
+C:\Users\aygup\source\repos\clipboardalpha\clipboardalpha\bin\Debug\DatabaseLayer.dll.config
+C:\Users\aygup\source\repos\clipboardalpha\clipboardalpha\bin\Debug\System.Data.SQLite.xml
+C:\Users\aygup\source\repos\clipboardalpha\clipboardalpha\bin\Debug\System.Data.SQLite.dll.config
