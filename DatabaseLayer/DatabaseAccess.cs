@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SQLite;
 using System.IO;
 using System.Configuration;
+using System.Data;
 
 namespace DatabaseLayer
 {
@@ -14,28 +15,51 @@ namespace DatabaseLayer
         private SQLiteConnection sql_con;
         private SQLiteCommand sql_cmd;
         private SQLiteDataAdapter DB;
+        private DataSet DS = new DataSet();
+        private DataTable DT = new DataTable();
         private string environmentpath;
         public DatabaseAccess()
         {
             environmentpath = ConfigurationManager.ConnectionStrings["path"].ToString();
             checkDB();
+            checkTable();
         }
-        public void checkDB()
+        private void checkDB()
         {
-            using (SQLiteConnection _connection = new SQLiteConnection())
+            using (sql_con = new SQLiteConnection())
             {
                 if (File.Exists(environmentpath))
-                {
-                    sql_con.ConnectionString= $"Data Source={environmentpath};Version=3";
+                {                                  
                 }
                 else
                 {
                     SQLiteConnection.CreateFile(environmentpath);
-                 }
+                }
+            }
+        }
+        private void checkTable()
+        {
+            SetConnection();
+            using (SQLiteCommand _command = new SQLiteCommand())
+            {
+                _command.Connection = sql_con;
+                string query = "CREATE TABLE IF NOT EXISTS filedata ( id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, filetype VARCHAR(100) NOT NULL, " +
+                 "filepath VARCHAR(100) NOT NULL);";
+                try
+                {
+                    ExecuteQuery(query);
+
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
             }
         }
         private void SetConnection()
         {
+            sql_con.ConnectionString = $"Data Source={environmentpath};Version=3";
             sql_con.Open();
         }
         private void ExecuteQuery(string txtQuery)
@@ -54,7 +78,15 @@ namespace DatabaseLayer
         }
         private void LoadData()
         {
-
+            sql_con.Open();
+            sql_cmd = sql_con.CreateCommand();
+            string CommandText = "select path from filedata";
+            DB = new SQLiteDataAdapter(CommandText, sql_con);
+            DS.Reset();
+            DB.Fill(DS);
+            DT = DS.Tables[0];
+            //Grid.DataSource = DT;
+            CloseConnection();
         }
         private void AddData()
         {
