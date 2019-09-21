@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="ClipBoardModel.cs" />
     <Compile Include="ClipBoardViewModel.cs" />
+    <Compile Include="DBTableModel.cs" />
     <Compile Include="Formats.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

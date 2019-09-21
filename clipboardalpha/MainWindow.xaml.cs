@@ -15,7 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ClipBoardFrameWork;
 using Models;
-using DatabaseLayer;
+using DB;
 
 namespace clipboardalpha
 {
@@ -38,6 +38,7 @@ namespace clipboardalpha
         {
             newclips.ItemsSource = db.LoadData().DefaultView;
         }
+
         protected override void OnSourceInitialized(EventArgs e)
         {
             base.OnSourceInitialized(e);
@@ -75,7 +76,30 @@ namespace clipboardalpha
             newclips.ScrollIntoView(newclips.Items.CurrentItem);
           
         }
+        private void StoreData(object sender, RoutedEventArgs e)
+        {
+            var data=FindClickedItem(sender);
+            if(data!=null)
+            {
+                string x = data.Content.ToString();
+            }
+        }
+        private static Label FindClickedItem(object sender)
+        {
+            var mi = sender as MenuItem;
+            if (mi == null)
+            {
+                return null;
+            }
 
+            var cm = mi.CommandParameter as ContextMenu;
+            if (cm == null)
+            {
+                return null;
+            }
+
+            return cm.PlacementTarget as Label;
+        }
         protected override void OnClosing(CancelEventArgs e)
         {
             base.OnClosing(e);

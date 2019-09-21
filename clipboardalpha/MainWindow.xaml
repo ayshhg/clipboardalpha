@@ -48,10 +48,10 @@
                 <ListBox Name="newclips"  Grid.Column="1" Margin="20">
                     <ListBox.ItemTemplate>
                         <DataTemplate >
-                            <Label Content="{Binding Path=data}">
+                            <Label Name="outdata" Content="{Binding Path=data}">
                                 <Label.ContextMenu>
                                     <ContextMenu Name="cm" StaysOpen="true">
-                                        <MenuItem Name="storing" Header="Add to favourites" />
+                                        <MenuItem Name="storing" Header="Add to favourites" Click="StoreData" />
                                         <MenuItem Name="translate" Header="Translate" />
                                         <MenuItem Name="removal" Header="delete item" />
                                     </ContextMenu>
