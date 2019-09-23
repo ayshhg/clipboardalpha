@@ -48,7 +48,7 @@
                 <ListBox Name="newclips"  Grid.Column="1" Margin="20">
                     <ListBox.ItemTemplate>
                         <DataTemplate >
-                            <Label Name="outdata" Content="{Binding Path=data}">
+                            <Label Name="outdata" Content="{Binding Path=filepath}">
                                 <Label.ContextMenu>
                                     <ContextMenu Name="cm" StaysOpen="true">
                                         <MenuItem Name="storing" Header="Add to favourites" Click="StoreData" />

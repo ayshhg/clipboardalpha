@@ -20,13 +20,8 @@ namespace DB
             private DataSet DS = new DataSet();
             private DataTable DT = new DataTable();
             private string environmentpath;
-        private DBTableModel table;
-        public static void Main()
-        {
-            DatabaseAccess x = new DatabaseAccess();
-            DataTable test = x.LoadData();
-
-        }
+        private static FileData table;
+  
             public DatabaseAccess()
             {
                 //  environmentpath = ConfigurationManager.ConnectionStrings["path"].ToString();
@@ -105,9 +100,11 @@ namespace DB
             UpdateQuery(CommandText);
             return DT;
         }
-            private void AddData(DBTableModel data)
+            public void AddData(FileData data)
             {
-
+           // SetConnection();
+            string query = "insert into filedata (filetype,filepath) values('" + data.filetype + ","+data.filepath+"')";
+            UpdateQuery(query);
             }
             private void DeleteData()
             {

@@ -33,3 +33,5 @@ C:\Users\aygup\source\repos\clipboardalpha\clipboardalpha\bin\Debug\System.Data.
 C:\Users\aygup\source\repos\clipboardalpha\clipboardalpha\bin\Debug\System.Data.SQLite.Linq.dll
 C:\Users\aygup\source\repos\clipboardalpha\clipboardalpha\bin\Debug\EntityFramework.xml
 C:\Users\aygup\source\repos\clipboardalpha\clipboardalpha\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\aygup\source\repos\clipboardalpha\clipboardalpha\bin\Debug\ClipBoardFrameWork.dll.config
+C:\Users\aygup\source\repos\clipboardalpha\clipboardalpha\bin\Debug\Models.dll.config

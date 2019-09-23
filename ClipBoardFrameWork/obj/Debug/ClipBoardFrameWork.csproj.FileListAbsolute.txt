@@ -7,3 +7,5 @@ C:\Users\aygup\source\repos\clipboardalpha\ClipBoardFrameWork\obj\Debug\ClipBoar
 C:\Users\aygup\source\repos\clipboardalpha\ClipBoardFrameWork\bin\Debug\Models.dll
 C:\Users\aygup\source\repos\clipboardalpha\ClipBoardFrameWork\bin\Debug\Models.pdb
 C:\Users\aygup\source\repos\clipboardalpha\ClipBoardFrameWork\obj\Debug\ClipBoardFrameWork.csproj.CopyComplete
+C:\Users\aygup\source\repos\clipboardalpha\ClipBoardFrameWork\bin\Debug\ClipBoardFrameWork.dll.config
+C:\Users\aygup\source\repos\clipboardalpha\ClipBoardFrameWork\bin\Debug\Models.dll.config

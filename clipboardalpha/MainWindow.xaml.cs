@@ -26,17 +26,21 @@ namespace clipboardalpha
     {
         ClipBoardFrame clipboard;
         ClipBoardViewModel eventresult = new ClipBoardViewModel();
-        DatabaseAccess db = new DatabaseAccess();
+      //  DatabaseAccess db = new DatabaseAccess();
+        DatabaseEntity db = new DatabaseEntity();
 
         public MainWindow()
         {
             InitializeComponent();
-            FillDataGrid();
+           
             newclips.ItemsSource = eventresult;
+            FillDataGrid();
         }
       public void FillDataGrid()
         {
-            newclips.ItemsSource = db.LoadData().DefaultView;
+
+            var z = db.LoadData();
+            newclips.ItemsSource = z;
         }
 
         protected override void OnSourceInitialized(EventArgs e)
