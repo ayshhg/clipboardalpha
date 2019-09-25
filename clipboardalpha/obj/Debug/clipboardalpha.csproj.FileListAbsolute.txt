@@ -35,3 +35,5 @@ C:\Users\aygup\source\repos\clipboardalpha\clipboardalpha\bin\Debug\EntityFramew
 C:\Users\aygup\source\repos\clipboardalpha\clipboardalpha\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\aygup\source\repos\clipboardalpha\clipboardalpha\bin\Debug\ClipBoardFrameWork.dll.config
 C:\Users\aygup\source\repos\clipboardalpha\clipboardalpha\bin\Debug\Models.dll.config
+C:\Users\aygup\source\repos\clipboardalpha\clipboardalpha\obj\Debug\Favourites.g.cs
+C:\Users\aygup\source\repos\clipboardalpha\clipboardalpha\obj\Debug\Favourites.baml

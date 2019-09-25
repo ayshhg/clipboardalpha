@@ -13,9 +13,9 @@ namespace Models
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public string data{get; set;}
+        public string filepath{get; set;}
 
-        public string type { get; set; }
+        public string filetype { get; set; }
         private void OnPropertyChanged(string propertyName)
         {
             var handler = PropertyChanged;

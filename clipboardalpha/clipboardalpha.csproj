@@ -93,10 +93,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Favourites.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Overall.xaml.cs">
       <DependentUpon>Overall.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Favourites.xaml.cs">
+      <DependentUpon>Favourites.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

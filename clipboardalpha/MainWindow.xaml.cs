@@ -34,7 +34,7 @@ namespace clipboardalpha
             InitializeComponent();
            
             newclips.ItemsSource = eventresult;
-            FillDataGrid();
+         
         }
       public void FillDataGrid()
         {
@@ -46,7 +46,7 @@ namespace clipboardalpha
         protected override void OnSourceInitialized(EventArgs e)
         {
             base.OnSourceInitialized(e);
-
+            FillDataGrid();
             clipboard = new ClipBoardFrame(this);
             clipboard.ClipboardTextChanged += ClipboardTextChanged;
         }
@@ -66,7 +66,7 @@ namespace clipboardalpha
         }
         private  void ClipboardTextChanged(object sender, ClipBoardModel result)
         {
-            var clippedText = result.data.Trim();
+            var clippedText = result.filepath.Trim();
 
             if (string.IsNullOrWhiteSpace(clippedText))
             {
@@ -82,13 +82,19 @@ namespace clipboardalpha
         }
         private void StoreData(object sender, RoutedEventArgs e)
         {
-            var data=FindClickedItem(sender);
-            if(data!=null)
-            {
-                string x = data.Content.ToString();
-            }
+            
+            FileData newdata=FindClickedItem(sender);
+            db.AddData(newdata);
+          
         }
-        private static Label FindClickedItem(object sender)
+        private void RemoveData(object sender, RoutedEventArgs e)
+        {
+
+            FileData datatoberemoved = FindClickedItem(sender);
+            db.RemoveData(datatoberemoved);
+
+        }
+        private static FileData FindClickedItem(object sender)
         {
             var mi = sender as MenuItem;
             if (mi == null)
@@ -96,13 +102,11 @@ namespace clipboardalpha
                 return null;
             }
 
-            var cm = mi.CommandParameter as ContextMenu;
-            if (cm == null)
-            {
+            var x = mi.DataContext;
+            if (x == null)
                 return null;
-            }
-
-            return cm.PlacementTarget as Label;
+            return x as FileData;
+          
         }
         protected override void OnClosing(CancelEventArgs e)
         {

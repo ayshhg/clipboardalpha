@@ -124,19 +124,19 @@ namespace ClipBoardFrameWork
 
 
             ClipBoardModel result = new ClipBoardModel();
-            
+           
             if(Clipboard.ContainsFileDropList())
                 {
                 foreach(string item in Clipboard.GetFileDropList())
                 {
-                    result.data = item;
-                    result.type = Formats.file;
+                    result.filepath = item;
+                    result.filetype = Formats.file;
                 }
             }
             else if(Clipboard.ContainsText())
             {
-                result.data = Clipboard.GetText();
-                result.type = Formats.text;
+                result.filepath = Clipboard.GetText();
+                result.filetype = Formats.text;
             }
             else
             {
@@ -148,8 +148,8 @@ namespace ClipBoardFrameWork
                     temp2 = x;
                 }
                 // var x = Clipboard.GetImage();
-                result.data = "Invalid";
-                result.type = "Invalid";
+                result.filepath = "Invalid";
+                result.filetype = "Invalid";
             }
      
           

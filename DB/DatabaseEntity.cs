@@ -21,42 +21,37 @@ namespace DB
         }
         public List<FileData> LoadData()
         {
-             filecontext.filedata.Load();
-            /* table = ToDataTable(x);
-             var testtable = table.DefaultView.Table;
-             return x;
-             */
-          
+           
             filecontext.SaveChangesAsync();
-           // testAsync();
+    
             var x =  filecontext.filedata.ToList();
             return x;
         }
-        private DataTable ToDataTable<T>(T entity) where T : class
+        public void AddData(FileData newdata)
         {
-            var properties = typeof(T).GetProperties();
-            var table = new DataTable();
-
-            foreach (var property in properties)
-            {
-                table.Columns.Add(property.Name, property.PropertyType);
-            }
-
-            table.Rows.Add(properties.Select(p => p.GetValue(entity, null)).ToArray());
-            return table;
+            if (filecontext.filedata.Contains(newdata))
+                return;
+            filecontext.filedata.Add(newdata);
+            filecontext.SaveChangesAsync();
         }
+        public void RemoveData(FileData removedata)
+        {
+  
+                filecontext.filedata.Remove(removedata);
+                filecontext.SaveChangesAsync();
+           
+        }
+ 
         public async void testAsync()
         {
             try 
             {
                 var x = new FileData("testing", "test");
-               // filecontext.SaveChanges();
-            //    var z = filecontext.filedata.Count();
                 filecontext.filedata.Add(x);
                 var z = filecontext.Database;
                 var zz = filecontext.Configuration;
                 await filecontext.SaveChangesAsync();
-        //        var xs = filecontext.filedata;
+
             }
             catch(Exception e)
             {
