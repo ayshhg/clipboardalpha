@@ -11,11 +11,26 @@ namespace Models
     
     public class ClipBoardModel: INotifyPropertyChanged
     {
+        public ClipBoardModel()
+        {
+
+        }
+        public ClipBoardModel(string filepath,string filetype)
+        {
+            this.filepath = filepath;
+            this.filetype = filetype;
+        }
+        public FileData Convert()
+        {
+            FileData data = new FileData(this.filepath, this.filetype);
+            return data;
+        }
         public event PropertyChangedEventHandler PropertyChanged;
 
         public string filepath{get; set;}
 
         public string filetype { get; set; }
+        
         private void OnPropertyChanged(string propertyName)
         {
             var handler = PropertyChanged;

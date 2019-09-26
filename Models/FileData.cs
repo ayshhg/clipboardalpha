@@ -14,22 +14,20 @@ namespace Models
             this.filepath = null;
             this.filetype = null;
         }
-        public FileData(string filetype,string filepath)
+        public FileData(string filepath,string filetype)
         {
             this.filepath = filepath;
             this.filetype = filetype;
         }
-        public FileData(int id,string filetype,string filepath)
+        public ClipBoardModel Convert()
         {
-            this.id = id;
-            this.filepath = filepath;
-            this.filetype = filetype;
+            ClipBoardModel x = new ClipBoardModel(this.filepath, this.filetype);
+            return x;
         }
-        [Key]
-        public int id { get; set; }
-
+      
+       
         public string filetype { get; set; }
-
+        [Key]
         public string filepath { get; set; }
 
     }

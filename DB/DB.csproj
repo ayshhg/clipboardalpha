@@ -165,7 +165,6 @@
   <ItemGroup>
     <Compile Include="DatabaseAccess.cs" />
     <Compile Include="DatabaseEntity.cs" />
-    <Compile Include="DBInititalizer.cs" />
     <Compile Include="DBTest.cs" />
     <Compile Include="Models\DBEntityModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

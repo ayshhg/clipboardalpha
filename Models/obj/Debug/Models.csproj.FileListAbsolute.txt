@@ -1,9 +1,6 @@
+C:\Users\aygup\source\repos\clipboardalpha\Models\bin\Debug\Models.dll.config
 C:\Users\aygup\source\repos\clipboardalpha\Models\bin\Debug\Models.dll
 C:\Users\aygup\source\repos\clipboardalpha\Models\bin\Debug\Models.pdb
-C:\Users\aygup\source\repos\clipboardalpha\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
-C:\Users\aygup\source\repos\clipboardalpha\Models\obj\Debug\Models.dll
-C:\Users\aygup\source\repos\clipboardalpha\Models\obj\Debug\Models.pdb
-C:\Users\aygup\source\repos\clipboardalpha\Models\bin\Debug\Models.dll.config
 C:\Users\aygup\source\repos\clipboardalpha\Models\bin\Debug\Microsoft.Win32.Primitives.dll
 C:\Users\aygup\source\repos\clipboardalpha\Models\bin\Debug\netstandard.dll
 C:\Users\aygup\source\repos\clipboardalpha\Models\bin\Debug\System.AppContext.dll
@@ -100,6 +97,8 @@ C:\Users\aygup\source\repos\clipboardalpha\Models\bin\Debug\System.Xml.XmlDocume
 C:\Users\aygup\source\repos\clipboardalpha\Models\bin\Debug\System.Xml.XmlSerializer.dll
 C:\Users\aygup\source\repos\clipboardalpha\Models\bin\Debug\System.Xml.XPath.dll
 C:\Users\aygup\source\repos\clipboardalpha\Models\bin\Debug\System.Xml.XPath.XDocument.dll
+C:\Users\aygup\source\repos\clipboardalpha\Models\bin\Debug\EntityFramework.dll
+C:\Users\aygup\source\repos\clipboardalpha\Models\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\aygup\source\repos\clipboardalpha\Models\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\aygup\source\repos\clipboardalpha\Models\bin\Debug\Microsoft.EntityFrameworkCore.dll
 C:\Users\aygup\source\repos\clipboardalpha\Models\bin\Debug\Microsoft.EntityFrameworkCore.Relational.dll
@@ -125,6 +124,8 @@ C:\Users\aygup\source\repos\clipboardalpha\Models\bin\Debug\System.Interactive.A
 C:\Users\aygup\source\repos\clipboardalpha\Models\bin\Debug\System.Memory.dll
 C:\Users\aygup\source\repos\clipboardalpha\Models\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\aygup\source\repos\clipboardalpha\Models\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\aygup\source\repos\clipboardalpha\Models\bin\Debug\EntityFramework.xml
+C:\Users\aygup\source\repos\clipboardalpha\Models\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\aygup\source\repos\clipboardalpha\Models\bin\Debug\Microsoft.EntityFrameworkCore.xml
 C:\Users\aygup\source\repos\clipboardalpha\Models\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.xml
 C:\Users\aygup\source\repos\clipboardalpha\Models\bin\Debug\Microsoft.EntityFrameworkCore.Relational.xml
@@ -148,9 +149,8 @@ C:\Users\aygup\source\repos\clipboardalpha\Models\bin\Debug\System.Interactive.A
 C:\Users\aygup\source\repos\clipboardalpha\Models\bin\Debug\System.Memory.xml
 C:\Users\aygup\source\repos\clipboardalpha\Models\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\aygup\source\repos\clipboardalpha\Models\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\aygup\source\repos\clipboardalpha\Models\obj\Debug\Models.csproj.CopyComplete
-C:\Users\aygup\source\repos\clipboardalpha\Models\bin\Debug\EntityFramework.dll
-C:\Users\aygup\source\repos\clipboardalpha\Models\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\aygup\source\repos\clipboardalpha\Models\bin\Debug\EntityFramework.xml
-C:\Users\aygup\source\repos\clipboardalpha\Models\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\aygup\source\repos\clipboardalpha\Models\obj\Debug\Models.csprojAssemblyReference.cache
+C:\Users\aygup\source\repos\clipboardalpha\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\Users\aygup\source\repos\clipboardalpha\Models\obj\Debug\Models.csproj.CopyComplete
+C:\Users\aygup\source\repos\clipboardalpha\Models\obj\Debug\Models.dll
+C:\Users\aygup\source\repos\clipboardalpha\Models\obj\Debug\Models.pdb

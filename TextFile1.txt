@@ -1,5 +1,0 @@
-need to work on auto update ui
-figure out transfer of files (copyfilee)
-DB.Contains() fix
-change binding property of label
-divide appication into pages

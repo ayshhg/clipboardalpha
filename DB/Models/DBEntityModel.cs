@@ -14,16 +14,16 @@ namespace DB.Models
 
         public DBEntityModel() : base("name=FileDataContextConnection")
         {
-            //   Database.SetInitializer(new DBInitializer());
+           
            
                 Database.CreateIfNotExists();
-                Database.ExecuteSqlCommand("CREATE TABLE IF NOT EXISTS 'FileData' ( 'id' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, 'filetype' VARCHAR(100) NOT NULL, 'filepath' VARCHAR(100) NOT NULL);");
+                Database.ExecuteSqlCommand("CREATE TABLE IF NOT EXISTS 'FileData' ('filetype' VARCHAR(100) NOT NULL PRIMARY KEY, 'filepath' VARCHAR(100) NOT NULL);");
 
            
         }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            // Database does not pluralize table names
+          
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
         public DbSet<FileData> filedata { get; set; }

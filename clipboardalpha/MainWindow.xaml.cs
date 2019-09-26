@@ -31,6 +31,7 @@ namespace clipboardalpha
 
         public MainWindow()
         {
+           
             InitializeComponent();
            
             newclips.ItemsSource = eventresult;
@@ -39,31 +40,22 @@ namespace clipboardalpha
       public void FillDataGrid()
         {
 
-            var z = db.LoadData();
-            newclips.ItemsSource = z;
+            var loadata = db.LoadData();
+         
+            foreach(ClipBoardModel data in loadata)
+            eventresult.Add(data);
+
         }
 
         protected override void OnSourceInitialized(EventArgs e)
         {
             base.OnSourceInitialized(e);
-            FillDataGrid();
+           
             clipboard = new ClipBoardFrame(this);
             clipboard.ClipboardTextChanged += ClipboardTextChanged;
+            FillDataGrid();
         }
-        private List<ClipInfo> cliplist()
-        {
-            bool IsHTMLDataOnClipboard = Clipboard.ContainsData(DataFormats.Text);
-            string htmlData = null;
-            if (IsHTMLDataOnClipboard)
-            {
 
-                htmlData = Clipboard.GetText(TextDataFormat.Text);
-
-            }
-            List<ClipInfo> test = new List<ClipInfo>();
-            test.Add(new ClipInfo() { Text = htmlData });
-            return test;
-        }
         private  void ClipboardTextChanged(object sender, ClipBoardModel result)
         {
             var clippedText = result.filepath.Trim();
@@ -83,18 +75,19 @@ namespace clipboardalpha
         private void StoreData(object sender, RoutedEventArgs e)
         {
             
-            FileData newdata=FindClickedItem(sender);
-            db.AddData(newdata);
+            ClipBoardModel newdata=FindClickedItem(sender);
+            db.AddData(newdata.Convert());
           
         }
         private void RemoveData(object sender, RoutedEventArgs e)
         {
 
-            FileData datatoberemoved = FindClickedItem(sender);
-            db.RemoveData(datatoberemoved);
+            ClipBoardModel datatoberemoved = FindClickedItem(sender);
+            db.RemoveData(datatoberemoved.Convert());
+            eventresult.Remove(datatoberemoved);
 
         }
-        private static FileData FindClickedItem(object sender)
+        private static ClipBoardModel FindClickedItem(object sender)
         {
             var mi = sender as MenuItem;
             if (mi == null)
@@ -105,7 +98,7 @@ namespace clipboardalpha
             var x = mi.DataContext;
             if (x == null)
                 return null;
-            return x as FileData;
+            return x as ClipBoardModel;
           
         }
         protected override void OnClosing(CancelEventArgs e)

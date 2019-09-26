@@ -16,8 +16,10 @@ namespace DB
             DatabaseEntity test = new DatabaseEntity();
           //  test.testAsync();
             test.LoadData();
-
-           /* DatabaseAccess x = new DatabaseAccess();
+           FileData x=new FileData("test", "testing");
+            test.AddData(x);
+            test.RemoveData(x);
+;           /* DatabaseAccess x = new DatabaseAccess();
             table = new FileDataModel();
             table.filetype = "testtype";
             table.filepath = "testpath";

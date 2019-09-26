@@ -19,29 +19,36 @@ namespace DB
             filecontext = new DBEntityModel();
          
         }
-        public List<FileData> LoadData()
+        public List<ClipBoardModel> LoadData()
         {
            
             filecontext.SaveChangesAsync();
     
             var x =  filecontext.filedata.ToList();
-            return x;
+            List<ClipBoardModel> loadata = new List<ClipBoardModel>();
+            foreach(FileData temp in x)
+            {
+                loadata.Add(temp.Convert());
+            }
+            return loadata;
         }
         public void AddData(FileData newdata)
         {
-            if (filecontext.filedata.Contains(newdata))
-                return;
+
             filecontext.filedata.Add(newdata);
             filecontext.SaveChangesAsync();
         }
         public void RemoveData(FileData removedata)
         {
-  
-                filecontext.filedata.Remove(removedata);
-                filecontext.SaveChangesAsync();
+
+            var row = filecontext.filedata.SingleOrDefault(x => x.filepath == removedata.filepath);
+            if (row == null)
+                return;
+            filecontext.filedata.Remove(row);
+            filecontext.SaveChangesAsync();
            
         }
- 
+
         public async void testAsync()
         {
             try 

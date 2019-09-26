@@ -1,0 +1,2 @@
+figure out transfer of files (copyfilee)
+divide appication into pages
