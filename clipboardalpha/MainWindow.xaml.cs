@@ -58,9 +58,9 @@ namespace clipboardalpha
 
         private  void ClipboardTextChanged(object sender, ClipBoardModel result)
         {
-            var clippedText = result.filepath.Trim();
+            var clippedText = result.filepath;
 
-            if (string.IsNullOrWhiteSpace(clippedText))
+            if (clippedText==null)
             {
                 return;
             }

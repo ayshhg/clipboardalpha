@@ -1,2 +1,3 @@
 figure out transfer of files (copyfilee)
 divide appication into pages
+context menu for images and scrollviewing for listbox

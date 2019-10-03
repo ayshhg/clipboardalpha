@@ -22,10 +22,16 @@ namespace ClipBoardFrameWork
        
         [DllImport("user32.dll", SetLastError = true)]
         [return: MarshalAs(UnmanagedType.Bool)]
+
+
         public static extern bool RemoveClipboardFormatListener(IntPtr windowHandle);
 
        
         private static uint CLIPBRD_E_CANT_OPEN = 0x800401D0;
         public static int UnableToOpenClipboardComErrorCode = (int)CLIPBRD_E_CANT_OPEN;
+
+        [DllImport("gdi32.dll", EntryPoint = "DeleteObject")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern bool DeleteObject([In] IntPtr hObject);
     }
 }

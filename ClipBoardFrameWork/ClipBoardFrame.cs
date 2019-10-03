@@ -7,8 +7,12 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Interop;
+using System.Windows.Media;
+using System.Drawing;
 using ClipBoardFrameWork;
 using Models;
+using System.Windows.Media.Imaging;
+using System.IO;
 
 namespace ClipBoardFrameWork
 {
@@ -75,6 +79,8 @@ namespace ClipBoardFrameWork
         private void RemoveListenerForClipboardWin32Messages()
         {
             depends.RemoveClipboardFormatListener(WindowInteropHandle);
+            depends.DeleteObject(WindowInteropHandle);
+
         }
         private IntPtr Win32InteropMessageHandler(IntPtr windowHandle, int messageCode, IntPtr wParam, IntPtr lParam, ref bool messageHandled)
         {
@@ -138,8 +144,18 @@ namespace ClipBoardFrameWork
                 result.filepath = Clipboard.GetText();
                 result.filetype = Formats.text;
             }
+            else if(Clipboard.ContainsImage())
+                {
+                var x = Clipboard.GetImage();
+                result.filetype = Formats.image;
+                var bitmap= BitmapFromSource(x);
+                var img = ImageSourceFromBitmap(bitmap);
+                result.filepath = img;
+                
+            }
             else
             {
+                
                 string temp2;
                 IDataObject temp4 = Clipboard.GetDataObject();
                 var temp1 = temp4.GetFormats();
@@ -160,6 +176,26 @@ namespace ClipBoardFrameWork
             //}
         }
 
+        private System.Drawing.Bitmap BitmapFromSource(BitmapSource bitmapsource)
+        {
+            System.Drawing.Bitmap bitmap;
+            using (MemoryStream outStream = new MemoryStream())
+            {
+                BitmapEncoder enc = new BmpBitmapEncoder();
+                enc.Frames.Add(BitmapFrame.Create(bitmapsource));
+                enc.Save(outStream);
+                bitmap = new System.Drawing.Bitmap(outStream);
+            }
+            return bitmap;
+        }
+        private ImageSource ImageSourceFromBitmap(Bitmap bmp)
+        {
+            var handle = bmp.GetHbitmap();
+                        
+                return Imaging.CreateBitmapSourceFromHBitmap(handle, IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
+            
+            
+        }
         public void Dispose()
         {
             ReleaseResources();

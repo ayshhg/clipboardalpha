@@ -27,10 +27,11 @@ namespace Models
         }
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public string filepath{get; set;}
+        public dynamic filepath{get; set;}
 
         public string filetype { get; set; }
         
+
         private void OnPropertyChanged(string propertyName)
         {
             var handler = PropertyChanged;

@@ -6,7 +6,11 @@
         xmlns:local="clr-namespace:clipboardalpha"
         mc:Ignorable="d"
         Title="ClipBoard-Alpha" Height="450" Width="800">
+    <Window.Resources>
+        <local:BooleanToVisibiltyConverter x:Key="checkdata" />
+    </Window.Resources>
     <Grid>
+       
         <Grid.ColumnDefinitions>
 
             <ColumnDefinition />
@@ -46,10 +50,15 @@
                     <Button Style="{StaticResource buttonStyle}">File</Button>
                 </StackPanel>
                 <ListBox Name="newclips"  Grid.Column="1" Margin="20" BorderThickness="0">
+                 
                     <ListBox.ItemTemplate>
-                        <DataTemplate >
-                            <Label Name="outdata" Content="{Binding Path=filepath}">
-                                <Label.ContextMenu>
+                    
+                    <DataTemplate >
+                            
+                                <StackPanel>
+                                <Label x:Name="outdata" Content="{Binding Path=filepath}" Visibility="{Binding Path=filepath, Converter={StaticResource checkdata}}">
+
+                                    <Label.ContextMenu>
                                     <ContextMenu Name="cm" StaysOpen="true">
                                         <MenuItem Name="storing" Header="Add to favourites" Click="StoreData" />
                                         <MenuItem Name="translate" Header="Translate" />
@@ -57,8 +66,14 @@
                                     </ContextMenu>
                                 </Label.ContextMenu>
                             </Label>
+                                <Image Name="imgdata" Source="{Binding Path=filepath}" Width="150" Height="150" Visibility="Collapsed">
+ 
+                                </Image>
+                            </StackPanel>
+                               
                         </DataTemplate>
                     </ListBox.ItemTemplate>
+                    
                 </ListBox>
                
 

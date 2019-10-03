@@ -37,3 +37,4 @@ C:\Users\aygup\source\repos\clipboardalpha\clipboardalpha\obj\Debug\clipboardalp
 C:\Users\aygup\source\repos\clipboardalpha\clipboardalpha\obj\Debug\clipboardalpha.csproj.CopyComplete
 C:\Users\aygup\source\repos\clipboardalpha\clipboardalpha\obj\Debug\clipboardalpha.exe
 C:\Users\aygup\source\repos\clipboardalpha\clipboardalpha\obj\Debug\clipboardalpha.pdb
+C:\Users\aygup\source\repos\clipboardalpha\clipboardalpha\obj\Debug\GeneratedInternalTypeHelper.g.cs
